@@ -33,7 +33,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_server_python_interpreter = '/usr/bin/python'
 Plugin 'majutsushi/tagbar'
@@ -101,8 +100,17 @@ set t_Co=256                   " 在终端启用256色
 
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
+"------PEP8-------
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_post_args='--ignore=E501,E128,E225'
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_enable_highlighting=1
+
+
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'node_modules',
   \ }
+
