@@ -50,6 +50,7 @@ filetype plugin indent on    " required
 "一些基本配置
 set anti enc=utf-8
 set guifont=Source_Code_Pro:h12
+set expandtab smarttab shiftwidth=4 tabstop=4
 
 filetype plugin indent on     " required!
 " Set to auto read when a file is changed from the outside
@@ -80,7 +81,7 @@ colorscheme solarized
 "NERDTree= = = 
 nmap <leader>n :NERDTreeToggle<CR>
 let NERDTreeWinSize=24
-let NERDTreeIgnore=['\.pyc', '\.swp', '\~']
+let NERDTreeIgnore=['\.pyc', '\.swp', '\~', '__pycache__']
 "switch window
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
@@ -112,5 +113,4 @@ let g:syntastic_enable_highlighting=1
 let g:UltiSnipsEditSplit="vertical"
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'node_modules',
-  \ }
-
+\ }
